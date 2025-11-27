@@ -1,0 +1,129 @@
+#sidebar {
+    width: 350px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: width 0.3s ease;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.sidebar-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.sidebar-header p {
+    color: #a0a0a0;
+}
+
+.search-container {
+    padding: 20px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+#station-search {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+#search-results {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+#search-results li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#search-results li:hover {
+    background-color: var(--secondary-color);
+}
+
+.train-list-container {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.train-list-container h2 {
+    margin-bottom: 15px;
+}
+
+#train-list-content .placeholder {
+    color: #a0a0a0;
+    font-style: italic;
+}
+
+.train-item {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.train-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.train-line {
+    font-weight: bold;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.train-destination {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.train-time {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.sidebar-footer {
+    padding: 15px;
+    font-size: 0.8rem;
+    color: #888;
+    border-top: 1px solid var(--secondary-color);
+    text-align: center;
+}
+
+/* --- Mapa Principal --- */
+#map-container {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: grab;
+}
+
+#map-container:active {
+    cursor: grabbing;
+}
+
+#map-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}

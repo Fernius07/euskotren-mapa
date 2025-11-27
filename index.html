@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euskotren - Mapa en Tiempo Real (Simulado)</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="utils.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div id="app-container">
+        <!-- Panel lateral para controles e información -->
+        <aside id="sidebar">
+            <header class="sidebar-header">
+                <h1>Euskotren</h1>
+                <p>Mapa de red (Simulado)</p>
+            </header>
+            <div class="search-container">
+                <input type="text" id="station-search" placeholder="Buscar estación...">
+                <ul id="search-results"></ul>
+            </div>
+            <div class="train-list-container">
+                <h2>Próximos Trenes</h2>
+                <div id="train-list-content">
+                    <!-- Los trenes de la estación seleccionada aparecerán aquí -->
+                    <p class="placeholder">Selecciona una estación en el mapa o búscala para ver los próximos trenes.</p>
+                </div>
+            </div>
+             <footer class="sidebar-footer">
+                <p>Datos GTFS procesados en el navegador.</p>
+                <p>Hora actual: <span id="current-time"></span></p>
+            </footer>
+        </aside>
+
+        <!-- Contenedor principal para el mapa -->
+        <main id="map-container">
+            <svg id="map-svg"></svg>
+            <div class="zoom-controls">
+                <button id="zoom-in">+</button>
+                <button id="zoom-out">-</button>
+                <button id="zoom-reset">⟲</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
